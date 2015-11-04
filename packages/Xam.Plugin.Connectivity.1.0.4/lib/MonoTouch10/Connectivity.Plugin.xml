@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Connectivity.Plugin</name>
+    </assembly>
+    <members>
+        <member name="T:Connectivity.Plugin.CrossConnectivity">
+            <summary>
+            Cross platform Connectivity implementations
+            </summary>
+        </member>
+        <member name="M:Connectivity.Plugin.CrossConnectivity.Dispose">
+            <summary>
+            Dispose of everything 
+            </summary>
+        </member>
+        <member name="P:Connectivity.Plugin.CrossConnectivity.Current">
+            <summary>
+            Current settings to use
+            </summary>
+        </member>
+        <member name="T:Connectivity.Plugin.ConnectivityImplementation">
+            <summary>
+            Implementation for Connectivity
+            </summary>
+        </member>
+        <member name="M:Connectivity.Plugin.ConnectivityImplementation.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Connectivity.Plugin.ConnectivityImplementation.IsReachable(System.String,System.Int32)">
+            <summary>
+            Tests if a host name is pingable
+            </summary>
+            <param name="host">The host name can either be a machine name, such as "java.sun.com", or a textual representation of its IP address (127.0.0.1)</param>
+            <param name="msTimeout">Timeout in milliseconds</param>
+            <returns></returns>
+        </member>
+        <member name="M:Connectivity.Plugin.ConnectivityImplementation.IsRemoteReachable(System.String,System.Int32,System.Int32)">
+            <summary>
+            Tests if a remote host name is reachable 
+            </summary>
+            <param name="host">Host name can be a remote IP or URL of website (no http:// or www.</param>
+            <param name="port">Port to attempt to check is reachable.</param>
+            <param name="msTimeout">Timeout in milliseconds.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Connectivity.Plugin.ConnectivityImplementation.Dispose(System.Boolean)">
+            <summary>
+            Dispose
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="P:Connectivity.Plugin.ConnectivityImplementation.IsConnected">
+            <summary>
+            Gets if there is an active internet connection
+            </summary>
+        </member>
+        <member name="P:Connectivity.Plugin.ConnectivityImplementation.ConnectionTypes">
+            <summary>
+            Gets the list of all active connection types.
+            </summary>
+        </member>
+        <member name="P:Connectivity.Plugin.ConnectivityImplementation.Bandwidths">
+            <summary>
+            Not supported on iOS
+            </summary>
+        </member>
+        <member name="T:Connectivity.Plugin.NetworkStatus">
+            <summary>
+            Status of newtowkr enum
+            </summary>
+        </member>
+        <member name="F:Connectivity.Plugin.NetworkStatus.NotReachable">
+            <summary>
+            No internet connection
+            </summary>
+        </member>
+        <member name="F:Connectivity.Plugin.NetworkStatus.ReachableViaCarrierDataNetwork">
+            <summary>
+            Reachable view Cellular.
+            </summary>
+        </member>
+        <member name="F:Connectivity.Plugin.NetworkStatus.ReachableViaWiFiNetwork">
+            <summary>
+            Reachable view wifi
+            </summary>
+        </member>
+        <member name="T:Connectivity.Plugin.Reachability">
+            <summary>
+            Reachability helper
+            </summary>
+        </member>
+        <member name="F:Connectivity.Plugin.Reachability.HostName">
+            <summary>
+            Default host name to use
+            </summary>
+        </member>
+        <member name="M:Connectivity.Plugin.Reachability.IsReachableWithoutRequiringConnection(MonoTouch.SystemConfiguration.NetworkReachabilityFlags)">
+            <summary>
+            Checks if reachable without requireing a connection
+            </summary>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Connectivity.Plugin.Reachability.IsHostReachable(System.String,System.Int32)">
+            <summary>
+            Checks if host is reachable
+            </summary>
+            <param name="host"></param>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Connectivity.Plugin.Reachability.IsHostReachable(System.String)">
+            <summary>
+             Is the host reachable with the current network configuration
+            </summary>
+            <param name="host"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Connectivity.Plugin.Reachability.IsAdHocWiFiNetworkAvailable(MonoTouch.SystemConfiguration.NetworkReachabilityFlags@)">
+            <summary>
+            Checks ad hoc wifi is available
+            </summary>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Connectivity.Plugin.Reachability.RemoteHostStatus">
+            <summary>
+            Checks the remote host status
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Connectivity.Plugin.Reachability.InternetConnectionStatus">
+            <summary>
+            Checks internet connection status
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Connectivity.Plugin.Reachability.LocalWifiConnectionStatus">
+            <summary>
+            Check local wifi status
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Connectivity.Plugin.Reachability.Dispose">
+            <summary>
+            Dispose
+            </summary>
+        </member>
+        <member name="E:Connectivity.Plugin.Reachability.ReachabilityChanged">
+            <summary>
+            Raised every time there is an interesting reachable event,
+            we do not even pass the info as to what changed, and
+            we lump all three status we probe into one
+            </summary>
+        </member>
+    </members>
+</doc>

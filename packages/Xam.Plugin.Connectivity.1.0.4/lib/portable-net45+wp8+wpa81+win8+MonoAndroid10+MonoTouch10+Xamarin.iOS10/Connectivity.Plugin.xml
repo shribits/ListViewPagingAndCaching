@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Connectivity.Plugin</name>
+    </assembly>
+    <members>
+        <member name="T:Connectivity.Plugin.CrossConnectivity">
+            <summary>
+            Cross platform Connectivity implementations
+            </summary>
+        </member>
+        <member name="M:Connectivity.Plugin.CrossConnectivity.Dispose">
+            <summary>
+            Dispose of everything 
+            </summary>
+        </member>
+        <member name="P:Connectivity.Plugin.CrossConnectivity.Current">
+            <summary>
+            Current settings to use
+            </summary>
+        </member>
+    </members>
+</doc>

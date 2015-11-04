@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="Yahooooo.ExamplePage">
+	<ContentPage.Content>
+		<StackLayout BackgroundColor="Gray" Padding="10">
+			<Label Text="{Binding name}"/>
+			<ListView x:Name="list" ItemsSource="{Binding CollectionItems}" HasUnevenRows="true" SeparatorVisibility="None" IsPullToRefreshEnabled="true" RefreshCommand="{Binding LoadMoreCommand}" IsRefreshing="{Binding IsLoading, Mode=OneWay}">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<ViewCell.View>
+								<StackLayout Padding="10,10,10,5" BackgroundColor="Red">
+									<Frame BackgroundColor="White" HasShadow="false" OutlineColor="Transparent">
+										<StackLayout>
+											<Label Text="{Binding name}" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" TextColor="Black"/>
+											<Grid>
+												<Grid.ColumnDefinitions>
+													<ColumnDefinition Width="*" />
+													<ColumnDefinition Width="*" />
+												</Grid.ColumnDefinitions>
+												<Grid.RowDefinitions>
+												   <RowDefinition Height="*"/>
+												</Grid.RowDefinitions>
+												<StackLayout Grid.Row="0" Grid.Column="0" >
+													<Label Text="START TIME" FontSize="12" TextColor="Black"/>
+													<Label Text="{Binding start_time}" FontSize="12" TextColor="Black"/>
+												</StackLayout>
+												<StackLayout Grid.Row="0" Grid.Column="1" >
+													<Label Text="END TIME" FontSize="12" TextColor="Black"/>
+													<Label Text="{Binding end_time}" FontSize="12" TextColor="Black"/>
+												</StackLayout>
+											</Grid>
+											<Grid>
+												<Grid.ColumnDefinitions>
+													<ColumnDefinition Width="*" />
+													<ColumnDefinition Width="*" />
+												</Grid.ColumnDefinitions>
+												<Grid.RowDefinitions>
+												   <RowDefinition Height="*"/>
+												</Grid.RowDefinitions>
+												<StackLayout Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+													<Label Text="CHANNEL: " FontAttributes="Bold" FontSize="12" TextColor="Black"/>
+													<Label Text="{Binding channel}" FontSize="12" TextColor="Black"/>
+												</StackLayout>
+												<StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal" >
+													<Label Text="RATING: " FontAttributes="Bold" FontSize="12" TextColor="Black"/>
+													<Label Text="{Binding rating}" FontSize="12" TextColor="Black"/>
+												</StackLayout>
+										</Grid>
+										</StackLayout>
+									</Frame>
+								</StackLayout>
+							</ViewCell.View>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

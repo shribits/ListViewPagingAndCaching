@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Connectivity.Plugin</name>
+    </assembly>
+    <members>
+        <member name="T:Connectivity.Plugin.CrossConnectivity">
+            <summary>
+            Cross platform Connectivity implementations
+            </summary>
+        </member>
+        <member name="M:Connectivity.Plugin.CrossConnectivity.Dispose">
+            <summary>
+            Dispose of everything 
+            </summary>
+        </member>
+        <member name="P:Connectivity.Plugin.CrossConnectivity.Current">
+            <summary>
+            Current settings to use
+            </summary>
+        </member>
+        <member name="T:Connectivity.Plugin.ConnectivityImplementation">
+            <summary>
+            Connectivity Implementation for WinRT
+            </summary>
+        </member>
+        <member name="M:Connectivity.Plugin.ConnectivityImplementation.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Connectivity.Plugin.ConnectivityImplementation.IsReachable(System.String,System.Int32)">
+            <summary>
+            Checks if remote is reachable. RT apps cannot do loopback so this will alway return false.
+            You can use it to check remote calls though.
+            </summary>
+            <param name="host"></param>
+            <param name="msTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Connectivity.Plugin.ConnectivityImplementation.IsRemoteReachable(System.String,System.Int32,System.Int32)">
+            <summary>
+            Tests if a remote host name is reachable 
+            </summary>
+            <param name="host">Host name can be a remote IP or URL of website (no http:// or www.)</param>
+            <param name="port">Port to attempt to check is reachable.</param>
+            <param name="msTimeout">Timeout in milliseconds.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Connectivity.Plugin.ConnectivityImplementation.Dispose(System.Boolean)">
+            <summary>
+            Dispose
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="P:Connectivity.Plugin.ConnectivityImplementation.IsConnected">
+            <summary>
+            Gets if there is an active internet connection
+            </summary>
+        </member>
+        <member name="P:Connectivity.Plugin.ConnectivityImplementation.ConnectionTypes">
+            <summary>
+            Gets the list of all active connection types.
+            </summary>
+        </member>
+        <member name="P:Connectivity.Plugin.ConnectivityImplementation.Bandwidths">
+            <summary>
+            Retrieves a list of available bandwidths for the platform.
+            Only active connections.
+            </summary>
+        </member>
+    </members>
+</doc>
